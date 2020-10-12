@@ -6,7 +6,7 @@ read -p "enter group name: " group
     else
          echo "group does not exist"
     fi
-echo -e " Supprimer ou créer un groupe ?" 
+echo " Supprimer ou créer un groupe ?" 
 echo " Taper x pour supprimer / Taper c pour créer :" 
 read choix 
 if [ $choix = "c" ] ; 
@@ -14,7 +14,7 @@ then
 echo "Entrer le nom du groupe souhaité :" 
 read group 
 groupadd $group 
-echo -e " Le group $group à bien été crée !" 
+echo " Le group $group à bien été crée !" 
 echo "Voulez-vous vérifier en regardant le fichier /etc/group ? (y/n)" 
 read rep 
 if [ $rep = "y" ] ; 
@@ -24,7 +24,7 @@ else
 echo "Appuyer sur la touche <Entrée> pour revenir au menu..." 
 read touche 
 case $touche in 
-*)echo -e "**** Reprise du script... ****";; 
+*)echo "Reprenons le srcipt";; 
 esac 
 menu_utilisateur 
 fi 
@@ -34,7 +34,7 @@ then
 echo "Donner le nom du groupe à supprimer :" 
 read group 
 groupdel $group 
-echo -e " La suppression du group $group est confirmée" 
+echo " La suppression du group $group est confirmée" 
 echo "Voulez-vous vérifier en regardant le fichier /etc/group ? (y/n)" 
 read rep 
 if [ $rep = "y" ] ; 
@@ -44,7 +44,7 @@ else
 echo "Appuyer sur la touche <Entrée> pour revenir au menu..." 
 read touche 
 case $touche in 
-*)echo -e "**** Reprise du script... ****";; 
+*)echo " Reprenons le script";; 
 esac 
 menu_utilisateur 
 fi 
