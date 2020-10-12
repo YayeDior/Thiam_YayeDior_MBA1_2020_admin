@@ -2,20 +2,29 @@
  if [ $# = 0 ]
  then
    echo "le premier argument est un nom de fichier"
-fi
+echo "choix:"
+read choix
 
-case "$fichier" in
+case $choix in
+*) read fichier.txt
+esac
 
-read)
+case $choix in 
+*)cp fichier.txt /tmp/script
+esac
 
-$ read -p "fichier.txt ? " NAME
-Votre nom ? toto
-$ echo $NAME
-toto
-
-;;
+case $choix in
+*)rm fichier.txt
 
 esac
+
+else
+
+exit 
+
+fi
+
+
 
 
 

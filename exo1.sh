@@ -1,6 +1,7 @@
 #!/bin/bash
-if [ -f $fichier ]; then
-   echo "$fichier existe"
+if [ -e fichier.txt ]
+then
+    echo "Le fichier existe"
 else
-   echo "$fichier n'est pas present"
-fi
+    echo "le fichier n'existe pas"
+fi 
